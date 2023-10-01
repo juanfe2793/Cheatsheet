@@ -28,14 +28,20 @@ def describe_ec2_instances_by_region(region_name):
         print(f"Found {len(instances)} instances in region {region_name}")
 
         # Create a table with the following columns: Instance ID, Instance Type, Region
-        table = PrettyTable(["Instance ID", "Instance Type", "Region"])
+        table = PrettyTable(["Instance ID", "Instance Name", "Instance Type", "Region"])
 
         for instance in instances:
             instance_id = instance['Instances'][0]['InstanceId']
             instance_type = instance['Instances'][0]['InstanceType']
+            instance_name = ""
+            if "Tags" in instance['Instances'][0]:
+                for tag in instance['Instances'][0]['Tags']:
+                    if tag["Key"] == "Name":
+                        instance_name = tag["Value"]
+                        break
             
             # Add a row to the table for each instance
-            table.add_row([instance_id, instance_type, region_name])
+            table.add_row([instance_id, instance_name, instance_type, region_name])
 
         print(table)
         

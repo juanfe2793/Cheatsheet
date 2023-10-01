@@ -20,21 +20,22 @@ pip install -r requirements.txt
 
 ## Resources included
 
-[ ] Computing Resources
+[x] Computing Resources
     [x] EC2
     [x] EKS cluster
     [x] Launch Template
-    [ ] Key Pairs
-    [ ] AMIs
-    [ ] Lambda
+    [x] Key Pairs
+    [x] AMIs
+    [x] Lambda
 [ ] Storage Resources (Including DBs)
-    [ ] Volumes
-    [ ] Snapshot
-    [ ] RDS
-    [ ] AWS Backups
-    [ ] DMS
-    [ ] Dynamo DB
-    [ ] ECR
+    [x] Volumes
+    [x] Snapshot
+    [x] RDS Instances
+    [x] RDS clusters (aurora)
+    [x] AWS Backups (vault + plans)
+    [x] DMS (replica instances, endpoints, db migration tasks)
+    [X] Dynamo DB
+    [x] ECR
     [ ] S3 - Buckets
 [ ] Networking Resources
     [x] Elastic IPs
@@ -73,8 +74,3 @@ pip install -r requirements.txt
 ## Describe AWS Resources
 
 This is the list of the scripts useful to **describe** AWS resources such like: EC2 instances, Elastic IPs.
-
-[describe EC2 instance](./docs/describe_ec2_instances.md)
-[Describe Elastic IPs](./docs/describe_elastic_ips.md)
-[Describe EKS cluster](./docs/describe_eks_cluster.md)
-[Describe LaunchTemplate](./docs/describe_launch_template.md)

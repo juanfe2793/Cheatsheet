@@ -2,11 +2,11 @@
 
 useful kubectl commands
 
-### Verbose
+## Verbose
 
 Add --v=4 to verbose a Kubectl command
 
-### Config Context
+## Config Context
 
 ```bash
 # Detailed current context
@@ -26,7 +26,7 @@ aws eks --region us-east-1 update-kubeconfig --name cluster --alias cluster
 
 ```
 
-### Pods
+## Pods
 
 ```bash
 
@@ -44,7 +44,7 @@ kubectl exec --stdin --tty <pod-name> -n kube-system -- /bin/bash
 kubectl cp <some-namespace>/<some-pod>:/tmp/foo /tmp/bar
 ```
 
-### Nodes
+## Nodes
 
 ```bash
 # Get tainted nodes.
@@ -55,7 +55,7 @@ kubectl get nodes -L eks.amazonaws.com/capacityType
 
 ```
 
-### Secrets
+## Secrets
 
 ```bash
 #Decode a secret
@@ -66,10 +66,22 @@ kubectl get pods -o json | jq '.items[].spec.containers[].env[]?.valueFrom.secre
 
 
 ```
-### Events
+
+## Events
 
 ```bash
 
 # List Events sorted by timestamp
 kubectl get events --sort-by=.metadata.creationTimestamp 
+kubectl get events --sort-by=".lastTimestamp"
+
+```
+
+## Service Accounts
+
+```shell
+
+# Enumerate permissions for a given service account
+kubectl -n my-namespace auth can-i --list --as system:serviceaccount:my-namespace:my-service-account
+
 ```

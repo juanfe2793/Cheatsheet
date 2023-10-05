@@ -4,7 +4,7 @@ import boto3
 import concurrent.futures
 from prettytable import PrettyTable
 
-ec2 = boto3.resource("ec2")
+ec2 = boto3.resource("ec2", "us-east-1")
 
 def check_list_backup_vault_permission(region_name):
     backupconn = boto3.client("backup", region_name=region_name)

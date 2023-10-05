@@ -4,7 +4,7 @@ import boto3
 import concurrent.futures
 from prettytable import PrettyTable
 
-ec2 = boto3.resource("ec2")
+ec2 = boto3.resource("ec2", "us-east-1")
 
 # Before describing the Launch templates in a region, we need to check if we have permission to describe launch templates.
 # If we don't have permission to describe launch templates in a region, we will get the following error:

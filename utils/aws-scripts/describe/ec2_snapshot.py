@@ -4,7 +4,7 @@ import boto3
 import concurrent.futures
 from prettytable import PrettyTable
 
-ec2 = boto3.resource("ec2")
+ec2 = boto3.resource("ec2", "us-east-1")
 
 def check_describe_snapshot_permission(region_name):
     ec2conn = boto3.client("ec2", region_name=region_name)

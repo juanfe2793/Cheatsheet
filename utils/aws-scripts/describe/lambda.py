@@ -4,7 +4,7 @@ import boto3
 import concurrent.futures
 from prettytable import PrettyTable
 
-ec2 = boto3.resource("ec2")
+ec2 = boto3.resource("ec2", "us-east-1")
 
 # Check if we have permission to list the lambda function in a region
 def check_list_lambda_permission(region_name):

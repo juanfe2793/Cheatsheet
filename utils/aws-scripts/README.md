@@ -27,7 +27,7 @@ pip install -r requirements.txt
     [x] Key Pairs
     [x] AMIs
     [x] Lambda
-[ ] Storage Resources (Including DBs)
+[x] Storage Resources (Including DBs)
     [x] Volumes
     [x] Snapshot
     [x] RDS Instances
@@ -36,18 +36,18 @@ pip install -r requirements.txt
     [x] DMS (replica instances, endpoints, db migration tasks)
     [X] Dynamo DB
     [x] ECR
-    [ ] S3 - Buckets
+    [x] S3 - Buckets
 [ ] Networking Resources
     [x] Elastic IPs
-    [ ] DHCP Option Set
-    [ ] VPC Endpoint
+    [x] DHCP Option Set
+    [x] VPC Endpoint
     [ ] Internet Gateway
     [ ] Network ACLs
     [ ] Network Interface
     [ ] Route Tables
-    [ ] Security Groups
+    [x] Security Groups
     [ ] NAT Gateways
-    [ ] Elastic Load Balancer
+    [x] Elastic Load Balancer
     [ ] VPCs
     [ ] R53 - DNS
     [ ] Cloudfront - CDN

@@ -4,7 +4,7 @@ import boto3
 import concurrent.futures
 from prettytable import PrettyTable
 
-ec2 = boto3.resource("ec2")
+ec2 = boto3.resource("ec2", "us-east-1")
 
 # Before describing the Key Pairs, we need to check if we have permission to describe the Key pairs in all regions.
 # If we don't have permission to describe the key pairs  in a region, we will get the following error:

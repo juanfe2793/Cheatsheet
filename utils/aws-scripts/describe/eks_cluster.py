@@ -4,7 +4,7 @@ import boto3
 import concurrent.futures
 from prettytable import PrettyTable
 
-ec2 = boto3.resource("ec2")
+ec2 = boto3.resource("ec2", "us-east-1")
 
 # Before listing the EKS cluster, we need to check if we have permission to list EKS clusters in all regions.
 # If we don't have permission to list EKS Clusters in a region, we will get the following error:

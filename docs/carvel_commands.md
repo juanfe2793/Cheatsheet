@@ -23,3 +23,9 @@ aws ecr get-login-password --region us-east-1 | docker login --username AWS --pa
 imgpkg pull -i 12345678910.dkr.ecr.us-east-1.amazonaws.com/internal/bundle-name:v0.0.1-test -o tmp
 
 ```
+
+### kapp
+
+```bash
+kctrl app kick -a app-name -n kapp-controller
+```

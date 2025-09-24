@@ -1,0 +1,18 @@
+site_name: Cheatsheet
+theme:
+  name: material
+plugins:
+  - exclude:
+      glob:
+        - "utils/aws-scripts/**"
+nav:
+  - Home: index.md
+  - Cheatsheets:
+    - Bash Profile: bash_profile.md
+    - Carvel: carvel_commands.md
+    - Docker & Containerd: docker_containerd_commands.md
+    - Git: git_commands.md
+    - Helm: helm_commands.md
+    - Kubectl: kubectl_commands.md
+    - Linux: linux_commands.md
+    - SaltStack: saltstack_commands.md
